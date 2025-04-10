@@ -39,6 +39,16 @@ body {
     opacity: 0.9;
 }
 
+/* 애드센스 광고 스타일 */
+.adsense-banner {
+    margin-bottom: 30px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
 /* 블로그 포스트 그리드 - CSS Grid 사용 */
 .blog-grid {
     display: grid;
