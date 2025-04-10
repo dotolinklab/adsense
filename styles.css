@@ -98,12 +98,13 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     z-index: 2;
     text-align: left;
-    /* 3줄 강제 설정 */
-    white-space: pre-line; /* 줄바꿈 허용 */
-    height: auto; /* 자동 높이로 변경 */
-    min-height: 4.2em; /* 최소 3줄 높이 */
-    display: block; /* -webkit-box 대신 block으로 변경 */
-    overflow: visible; /* 넘침 허용 */
+    white-space: normal;
+    word-break: keep-all;
+    height: auto;
+    min-height: 4.2em;
+    display: block;
+    overflow: visible;
+    padding: 0 10px;
 }
 
 /* 포스트 정보 내 제목 스타일 */
@@ -193,8 +194,11 @@ body {
     
     .post-img h2 {
         font-size: 1.1rem;
-        line-height: 1.3;
-        min-height: 3.9em; /* 폰트 크기에 맞게 조정 */
+        line-height: 1.4;
+        min-height: 3.9em;
+        padding: 0 8px;
+        word-break: keep-all;
+        white-space: normal;
     }
     
     .post-info {
@@ -233,10 +237,17 @@ body {
 /* 매우 작은 화면 */
 @media screen and (max-width: 400px) {
     .blog-grid {
-        grid-template-columns: 1fr; /* 매우 작은 화면에서는 1개 열 */
+        grid-template-columns: 1fr;
     }
     
     .post-img {
-        height: 180px; /* 전체 너비일 때 다시 높이 키움 */
+        height: 180px;
+    }
+    
+    .post-img h2 {
+        font-size: 1rem;
+        line-height: 1.4;
+        min-height: 3.6em;
+        padding: 0 5px;
     }
 }
